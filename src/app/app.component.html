@@ -1,0 +1,19 @@
+
+  <!-- -->
+  <!-- Links -->
+  
+ <div class="main_menu">
+   <nav>
+    <ul>
+      <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
+      <li><a routerLink="/project" routerLinkActive="active">Project</a></li>
+        <li><a routerLink="/person-detail" routerLinkActive="active">Person-detail</a></li>
+        <li><a routerLink="/profile" routerLinkActive="active" [queryParams]="{id:1}">Profile User 1</a></li>
+        <li><a routerLink="/profile" routerLinkActive="active" [queryParams]="{id:2}">Profile User 2</a></li>
+        <!-- <li><a routerLink="not-found">Not Found</a> -->
+    </ul> 
+   </nav>
+ </div> 
+
+
+<router-outlet></router-outlet>

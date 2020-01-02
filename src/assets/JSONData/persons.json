@@ -1,0 +1,6 @@
+[
+    {"id":1, "name":"mitu", "age":25, "gender":"female"},
+    {"id":2, "name":"borna", "age":26, "gender":"female"},
+    {"id":3, "name":"ritu", "age":22, "gender":"female"},
+    {"id":4, "name":"bindu", "age":30, "gender":"female"}
+  ]

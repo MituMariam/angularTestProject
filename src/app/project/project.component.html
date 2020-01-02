@@ -1,0 +1,76 @@
+
+<div class="wrapper">
+    <p>project works!</p>
+
+    <button (click)="NavigateHome()">Navigate to home</button> <br><br>
+
+
+    <h3 class="bg-danger p-1 text-white">{{getName()}} To do List</h3>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <form>
+                    <div class="form-group">
+                        <input #todotext class="form-control"   placeholder="Add your task here...">
+                      </div>
+                      <button type="submit" class="btn btn-primary" (click)=addItem(todotext.value) >Add Item</button>
+                </form><br><br>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Index</th>
+                            <th>Task</th>
+                            <th>Action</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor = "let item of getTodoItems(); let i = index;">
+                            <td>{{i + 1}}</td>
+                            <!-- col 2 -->
+                            <td>{{item.action}}</td>
+
+                            <!-- col 3 -->
+                            <td><input type="checkbox" [(ngModel)]="item.done"></td>
+
+                             <!-- col 4 -->
+                            <td [ngSwitch]="item.done">
+                                <span *ngSwitchCase="true"> Yes</span>
+                                <span *ngSwitchDefault> No</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+<!-- 
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h2>To Do App</h2><hr>
+                
+                <form>
+                    <div class="form-group">
+                        <input type="email" class="form-control" name=""  placeholder="Add your task here..." id="email">
+                      </div>
+                      <button type="submit" class="btn btn-primary" >Add Item</button>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Description</th>
+                            <th>Done</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+            
+        </div>
+    </div> -->
+</div>

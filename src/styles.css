@@ -1,0 +1,37 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+.main_menu nav {
+    width: 20%;
+    float: left;
+	height: 100vh;
+	background: #8a2be2;
+}
+.main_menu nav ul{
+    margin: 0;
+    padding: 0;
+}
+.main_menu nav ul li{
+    list-style: none;
+}
+.main_menu nav ul li a{
+    background-color: blueviolet;
+    display: block;
+    padding: 8px;
+    color: #fff;
+    font-size: 18px;
+}
+.main_menu nav ul li a:hover{
+    color: #fff;
+    text-decoration: none;
+}
+/* nav ul li a:Active{
+    color: crimson;
+} */
+.main_menu nav ul li a.active{
+    color: crimson;
+}
+.wrapper{
+ width: 80%;
+ float:right;
+}

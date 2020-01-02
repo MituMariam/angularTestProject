@@ -1,0 +1,47 @@
+<div class="wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h2>{{title1}}</h2><hr>
+                <h3><b>Add your tasks</b></h3>
+                <form>
+                    <div class="form-group">
+                        <input type="email" class="form-control" name="projectName" [(ngModel)] = "projectText" placeholder="Add your task here..." id="email">
+                      </div>
+                      <button type="submit" class="btn btn-primary" (click)= 'addItem()'>Add Item</button>
+                </form>
+            </div>
+            <div class="col-md-4">
+                <h3> <b>Task list <span>({{itemCounter}})</span></b></h3>
+               <ul>
+                   <li *ngFor ="let item of projects">{{item}} <span (click)="removeItem(i)">X</span></li>
+               </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h2>{{title2}}</h2><hr>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                          </tr>
+                    </thead>
+                    <tbody *ngFor="let item of persons">
+                        <tr>
+                            <td>{{item.id}}</td>
+                            <td>{{item.name}}</td>
+                          </tr>
+                    </tbody>
+                   
+                    
+                  </table>
+            </div>
+        </div>
+      
+    </div>
+
+</div>
+ 
+
